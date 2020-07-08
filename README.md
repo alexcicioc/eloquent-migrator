@@ -1,5 +1,7 @@
 # eloquent-migrator
 
+Simple db migrator that uses Laravel's db layer.
+
 ## Usage via docker-compose
 * Run `make build start`
 * Check the migrator logs with `docker logs -f eloquent_migrator`
