@@ -14,16 +14,25 @@
 * Run `php runMigrations.php`
 
 ## Adding new schemas
-* Create a new class under src/Schemas that implements SchemaInterface
+* Create a new class under src/Database/Schemas that implements SchemaInterface
 * See existing examples
 * See eloquent documentation https://laravel.com/docs/5.7/migrations#creating-tables
 * Add the new schema to the `SCHEMA_LIST` config in config.php
 
 ## Adding updates
-* Create a new class under src/Updates that implements either AlterInterface (plain MySql alters) or UpdateInterface (supports blueprints)
+* Create a new class under src/Database/Updates that implements either AlterInterface (plain MySql alters) or UpdateInterface (supports blueprints)
 * See existing examples
 * See eloquent documentation https://laravel.com/docs/5.7/migrations#column-modifiers
 * Add the new update to the `UPDATES_LIST` config in config.php
+
+## Adding content
+* Create a new class under src/Database/Content that implements ContentInterface
+* See existing examples
+* Existing strategies:
+  * insert - will generate an insert query based on the data you provided
+  * truncate-insert - will truncate the table then insert the data
+  * insert-ignore - will attempt to insert and ignore duplicate key errors if any
+* Add the new update to the `CONTENT_LIST` config in config.php
 
 ## Required environment variables (docker.env):
 * MYSQL_HOST

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Schemas;
+namespace App\Database\Schemas;
 
 use Carbon\Carbon;
 use Illuminate\Database\Schema\Blueprint;

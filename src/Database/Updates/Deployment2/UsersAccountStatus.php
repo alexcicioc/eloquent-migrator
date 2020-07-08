@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Updates\Deployment2;
+namespace App\Database\Updates\Deployment2;
 
-use App\Updates\UpdateInterface;
+use App\Database\Updates\UpdateInterface;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Capsule\Manager as Capsule;
 

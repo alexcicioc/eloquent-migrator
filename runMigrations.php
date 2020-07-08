@@ -28,6 +28,13 @@ function updateSchemas()
     }
 }
 
+function populateContent()
+{
+    foreach (CONTENT_LIST as $class) {
+        Migrator::addContent(new $class);
+    }
+}
+
 function runMigrations($retries = 0)
 {
     if ($retries > DB_CONNECT_MAX_RETRIES) {
@@ -38,6 +45,7 @@ function runMigrations($retries = 0)
     try {
         createSchemas();
         updateSchemas();
+        populateContent();
     } catch (PDOException $exception) {
         if ($exception->getCode() !== 2002) {
             throw $exception;

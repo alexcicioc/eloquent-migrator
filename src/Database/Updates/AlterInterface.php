@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Updates;
+namespace App\Database\Updates;
 
 
 interface AlterInterface

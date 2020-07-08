@@ -16,11 +16,15 @@ define('DB_CONNECT_MAX_RETRIES', $_SERVER['DB_CONNECT_MAX_RETRIES'] ?? 10);
 define('DB_CONNECT_RETRY_TIME', $_SERVER['DB_CONNECT_RETRY_TIME'] ?? 10);
 define('ENVIRONMENT', $_SERVER['ENVIRONMENT']);
 define('SCHEMA_LIST', [
-    "App\Schemas\Users",
-    "App\Schemas\UserNotifications",
+    "App\Database\Schemas\Users",
+    "App\Database\Schemas\UserNotifications",
 ]);
 
 define('UPDATES_LIST', [
-    "App\Updates\Deployment1\UserNotificationsStatus",
-    "App\Updates\Deployment2\UsersAccountStatus",
+    "App\Database\Updates\Deployment1\UserNotificationsStatus",
+    "App\Database\Updates\Deployment2\UsersAccountStatus",
+]);
+
+define('CONTENT_LIST', [
+    "App\Database\Content\UserNotifications",
 ]);

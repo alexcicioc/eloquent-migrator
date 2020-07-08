@@ -1,14 +1,12 @@
 <?php
 
 
-namespace App\Schemas;
+namespace App\Database\Updates;
 
 
-interface SchemaInterface
+interface UpdateInterface
 {
     public function getTableName(): string;
 
     public function getBlueprint(): callable;
-
-    public function getDefaultData(): array;
 }

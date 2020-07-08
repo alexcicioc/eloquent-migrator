@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Updates\Deployment1;
+namespace App\Database\Updates\Deployment1;
 
-use App\Updates\AlterInterface;
+use App\Database\Updates\AlterInterface;
 
 class UserNotificationsStatus implements AlterInterface
 {
