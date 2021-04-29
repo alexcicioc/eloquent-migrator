@@ -13,7 +13,7 @@
   },
   "require": {
     "ext-pdo": "*",
-    "illuminate/database": "^5.8",
+    "illuminate/database": "^6.20",
     "doctrine/dbal": "^2.9"
   },
   "config": {
